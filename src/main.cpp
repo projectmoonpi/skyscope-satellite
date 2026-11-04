@@ -97,7 +97,7 @@ void handleRoot() {
             "filters and map. Change those on the Pi's settings page.</p><p class=dim>Version " SKYSCOPE_SAT_VERSION
             " &middot; this display: ");
   page += htmlEscape(String(g_mdnsName) + ".local (" + device::address() + ")");
-  page += F("</p><p><a href='https://github.com/ricsne2010/skyscope-satellite'>github.com/ricsne2010/skyscope-satellite</a></p>"
+  page += F("</p><p><a href='https://github.com/projectmoonpi/skyscope-satellite'>github.com/projectmoonpi/skyscope-satellite</a></p>"
             "<p class=dim>Hold the BOOT button for 3 seconds to set up Wi-Fi again (10 seconds restores the default display wiring). Board wired differently? <a href='/hardware'>Display hardware (pins)</a>. Not for navigation.</p></section></main></body></html>");
   server.send(200, "text/html", page);
 }

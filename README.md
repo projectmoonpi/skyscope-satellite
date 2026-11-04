@@ -2,7 +2,7 @@
 
 # SkyScope Satellite
 
-**A 4.3″ display that mirrors your [SkyScope](https://github.com/ricsne2010/skyscope) radar.**
+**A 4.3″ display that mirrors your [SkyScope](https://github.com/projectmoonpi/skyscope) radar.**
 **Designed and Created by Project Moon Pi**
 
 SkyScope does the work on a Raspberry Pi (data, filters, map); the Satellite
@@ -14,7 +14,7 @@ settings page and every Satellite follows.
 
 > **Early release.** 1.1.2 builds cleanly and its screen has been checked with
 > the same drawing code running on a computer (the picture above), but it has not
-> yet been run on the board itself. Please [open an issue](https://github.com/ricsne2010/skyscope-satellite/issues)
+> yet been run on the board itself. Please [open an issue](https://github.com/projectmoonpi/skyscope-satellite/issues)
 > if something doesn't work.
 
 ## Documentation
@@ -29,13 +29,13 @@ settings page and every Satellite follows.
 | Display | **Sunton ESP32-8048S043**: ESP32-S3 (16 MB flash, 8 MB PSRAM), 4.3″ 800×480, GT911 capacitive touch |
 | Cable and power | USB-C data cable; any 5 V USB supply of 1 A or more |
 | Network | 2.4 GHz Wi-Fi |
-| SkyScope | [SkyScope](https://github.com/ricsne2010/skyscope) 1.1 or later on the same network, settings page on (port 7700) |
+| SkyScope | [SkyScope](https://github.com/projectmoonpi/skyscope) 1.1 or later on the same network, settings page on (port 7700) |
 | Case (optional) | A 3D-printable radar-console desk case: [case/](case) |
 
 ## Install
 
 **From a browser (no tools needed):** download `skyscope-satellite-1.1.2.bin` from
-the [latest release](https://github.com/ricsne2010/skyscope-satellite/releases/latest),
+the [latest release](https://github.com/projectmoonpi/skyscope-satellite/releases/latest),
 open the [ESP web flasher](https://espressif.github.io/esptool-js/) in Chrome or
 Edge, connect to the board, and program the file at address **0x0**. If no port
 shows up, hold **BOOT**, tap **RST**, release BOOT and connect again.
@@ -43,7 +43,7 @@ shows up, hold **BOOT**, tap **RST**, release BOOT and connect again.
 **From source with [PlatformIO](https://platformio.org):**
 
 ```sh
-git clone https://github.com/ricsne2010/skyscope-satellite.git
+git clone https://github.com/projectmoonpi/skyscope-satellite.git
 cd skyscope-satellite
 pio run -t upload
 ```
@@ -98,7 +98,7 @@ Satellite does no geography: it scales, moves and draws.
 ## Credits and licence
 
 MIT licence (see [LICENSE](LICENSE)). Radar, map and aircraft data come from
-your [SkyScope](https://github.com/ricsne2010/skyscope) (see its credits).
+your [SkyScope](https://github.com/projectmoonpi/skyscope) (see its credits).
 Libraries: LovyanGFX (FreeBSD), with its GNU FreeFont text (GPL with font
 exception); WiFiManager (MIT); ArduinoJson (MIT); the Espressif Arduino core
 (LGPL 2.1), built with PlatformIO (Apache 2.0). Built with

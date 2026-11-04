@@ -73,7 +73,7 @@
   <p class="lede">A 4.3-inch display that mirrors your SkyScope radar anywhere in the house.</p>
   <figure><img src="images/screen.png" alt="SkyScope Satellite screen">
     <figcaption>SkyScope Satellite: the same picture as your SkyScope, on a small screen.</figcaption></figure>
-  <p class="meta">Version 1.1.2 · Project: <a href="https://github.com/ricsne2010/skyscope-satellite">github.com/ricsne2010/skyscope-satellite</a> · Licence: MIT · Not for navigation.
+  <p class="meta">Version 1.1.2 · Project: <a href="https://github.com/projectmoonpi/skyscope-satellite">github.com/projectmoonpi/skyscope-satellite</a> · Licence: MIT · Not for navigation.
     <span class="no-print"> · <a href="SkyScope-Satellite-Guide.pdf">Download this guide as a PDF</a></span></p>
 </section>
 
@@ -93,7 +93,7 @@
 </ol>
 
 <h2 id="what">1. What the Satellite does</h2>
-<p>SkyScope Satellite turns a small 4.3-inch display into a second screen for <a href="https://github.com/ricsne2010/skyscope">SkyScope</a>. Put it on a desk, shelf or bedside table, and it shows the same live radar as your SkyScope: the same centre and range, the same filters, the same runways, airspace and SID/STAR routes, and the same emergency and watchlist highlights.</p>
+<p>SkyScope Satellite turns a small 4.3-inch display into a second screen for <a href="https://github.com/projectmoonpi/skyscope">SkyScope</a>. Put it on a desk, shelf or bedside table, and it shows the same live radar as your SkyScope: the same centre and range, the same filters, the same runways, airspace and SID/STAR routes, and the same emergency and watchlist highlights.</p>
 <p>All the work happens on the computer running SkyScope (usually a Raspberry Pi). The Satellite asks it for the picture once a second over your Wi-Fi and draws it, moving the aircraft smoothly between updates. You change everything (range, filters, map) on SkyScope's settings page and every Satellite follows. Several Satellites can follow one SkyScope.</p>
 <table>
   <tr><th>On the Satellite</th><th>Comes from SkyScope</th></tr>
@@ -101,7 +101,7 @@
   <tr><td>Map: runways, centrelines, airspace, SIDs and STARs, labels</td><td>The Map tab's choices</td></tr>
   <tr><td>Aircraft tags, the nearest-aircraft card and the list</td><td>The Filters, Presets and Alerts tabs</td></tr>
 </table>
-<div class="warn"><b>Early release.</b> Version 1.1.2 builds cleanly and its screen has been checked with the same drawing code running on a computer (see <a href="#source">Building from source</a>), but it has not yet been run on the board itself. If anything doesn't work, please <a href="https://github.com/ricsne2010/skyscope-satellite/issues">open an issue</a> with what you see.</div>
+<div class="warn"><b>Early release.</b> Version 1.1.2 builds cleanly and its screen has been checked with the same drawing code running on a computer (see <a href="#source">Building from source</a>), but it has not yet been run on the board itself. If anything doesn't work, please <a href="https://github.com/projectmoonpi/skyscope-satellite/issues">open an issue</a> with what you see.</div>
 
 <h2 id="needs">2. What you need</h2>
 <table>
@@ -111,15 +111,15 @@
   <tr><td><b>Power</b></td><td>Any 5 V USB supply of 1 A or more. Once installed, the computer is no longer needed.</td></tr>
   <tr><td><b>Wi-Fi</b></td><td>A 2.4 GHz network (the ESP32 can't use 5 GHz).</td></tr>
   <tr><td><b>Computer, once</b></td><td>To install the firmware: Chrome or Edge on Windows, macOS, Linux or ChromeOS (browser method), or PlatformIO (from source).</td></tr>
-  <tr><td><b>SkyScope</b></td><td>SkyScope 1.1 or later running on the same network, with its settings page on (port 7700, the default). See the <a href="https://github.com/ricsne2010/skyscope">SkyScope guide</a>.</td></tr>
-  <tr><td><b>Case (optional)</b></td><td>A 3D-printable desk case styled like a radar console, in the <a href="https://github.com/ricsne2010/skyscope-satellite/tree/main/case">case folder of the SkyScope Satellite project</a>. It fits both the Satellite and the Mini; measure your board first, as its instructions explain.</td></tr>
+  <tr><td><b>SkyScope</b></td><td>SkyScope 1.1 or later running on the same network, with its settings page on (port 7700, the default). See the <a href="https://github.com/projectmoonpi/skyscope">SkyScope guide</a>.</td></tr>
+  <tr><td><b>Case (optional)</b></td><td>A 3D-printable desk case styled like a radar console, in the <a href="https://github.com/projectmoonpi/skyscope-satellite/tree/main/case">case folder of the SkyScope Satellite project</a>. It fits both the Satellite and the Mini; measure your board first, as its instructions explain.</td></tr>
 </table>
 
 <h2 id="install">3. Installing the firmware</h2>
 <p>There are two ways. Most people should use the browser: nothing to install on your computer.</p>
 <h3>From a web browser (recommended)</h3>
 <ol class="steps">
-  <li>Download <b>skyscope-satellite-1.1.2.bin</b> from the <a href="https://github.com/ricsne2010/skyscope-satellite/releases/latest">latest release</a> (under <i>Assets</i>).</li>
+  <li>Download <b>skyscope-satellite-1.1.2.bin</b> from the <a href="https://github.com/projectmoonpi/skyscope-satellite/releases/latest">latest release</a> (under <i>Assets</i>).</li>
   <li>Plug the display into your computer with the USB-C cable.</li>
   <li>Open <a href="https://espressif.github.io/esptool-js/">https://espressif.github.io/esptool-js/</a> in <b>Chrome</b> or <b>Edge</b>. Leave the baud rate at 921600 and press <b>Connect</b>. Pick the port that appears (often “USB JTAG/serial debug unit” or “USB Single Serial”).
     <div class="note">No port listed? Hold the board's <b>BOOT</b> button, press and release <b>RST</b> (or unplug and replug the cable), then let go of BOOT and press Connect again. On Windows a driver install is occasionally needed for the CH340 chip some boards use.</div></li>
@@ -129,7 +129,7 @@
 <p>Updating later is the same: program the newer file. Your Wi-Fi and settings are kept unless you choose <i>Erase Flash</i>.</p>
 <h3>From source with PlatformIO</h3>
 <p>For developers, or to change the code. Install <a href="https://platformio.org/install">PlatformIO</a> (the VS Code extension or the command line), then:</p>
-<pre><code>git clone https://github.com/ricsne2010/skyscope-satellite.git
+<pre><code>git clone https://github.com/projectmoonpi/skyscope-satellite.git
 cd skyscope-satellite
 pio run -t upload          # builds and installs over USB
 pio device monitor         # optional: the board's log, 115200 baud</code></pre>
@@ -236,7 +236,7 @@ tools/preview/build.sh     # SDL_INC=… SDL_LIB=… if SDL2 isn't installed sys
 </table>
 <div class="warn"><b>Not for navigation.</b> Aircraft positions may be delayed, incomplete or wrong. ADS-B shows only aircraft that broadcast it. Never use this display for flight planning or navigation.</div>
 
-<p class="meta"><img src="images/moon-pi-logo-128.png" alt="" style="width:40px;height:40px;vertical-align:middle;margin-right:8px">SkyScope Satellite was designed and created by Project Moon Pi, built with Claude Code (Anthropic), and is free software under the MIT licence. Source: <a href="https://github.com/ricsne2010/skyscope-satellite">github.com/ricsne2010/skyscope-satellite</a>.</p>
+<p class="meta"><img src="images/moon-pi-logo-128.png" alt="" style="width:40px;height:40px;vertical-align:middle;margin-right:8px">SkyScope Satellite was designed and created by Project Moon Pi, built with Claude Code (Anthropic), and is free software under the MIT licence. Source: <a href="https://github.com/projectmoonpi/skyscope-satellite">github.com/projectmoonpi/skyscope-satellite</a>.</p>
 
 </main>
 </body>
