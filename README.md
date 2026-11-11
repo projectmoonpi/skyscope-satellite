@@ -12,7 +12,7 @@ settings page and every Satellite follows.
 
 ![Satellite screen: Phoenix Sky Harbor at 25 miles with airspace, runways, SIDs and STARs](docs/images/screen.png)
 
-> **Early release.** 1.1.2 builds cleanly and its screen has been checked with
+> **Early release.** 1.1.3 builds cleanly and its screen has been checked with
 > the same drawing code running on a computer (the picture above), but it has not
 > yet been run on the board itself. If something doesn't work, please email
 > [support@projectmoonpi.com](mailto:support@projectmoonpi.com) or [open an issue](https://github.com/projectmoonpi/skyscope-satellite/issues).
@@ -34,7 +34,7 @@ settings page and every Satellite follows.
 
 ## Install
 
-**From a browser (no tools needed):** download `skyscope-satellite-1.1.2.bin` from
+**From a browser (no tools needed):** download `skyscope-satellite-1.1.3.bin` from
 the [latest release](https://github.com/projectmoonpi/skyscope-satellite/releases/latest) (also on [www.projectmoonpi.com/downloads](https://www.projectmoonpi.com/downloads/#skyscope)),
 open the [ESP web flasher](https://espressif.github.io/esptool-js/) in Chrome or
 Edge, connect to the board, and program the file at address **0x0**. If no port
