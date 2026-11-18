@@ -3,3 +3,5 @@ tools/preview/build/
 .vscode/
 .DS_Store
 *.ppm
+__pycache__/
+*.pyc
