@@ -1,5 +1,5 @@
 """Shaded preview pictures of the case (run with FreeCAD's Python, which has
-matplotlib):  /Applications/FreeCAD.app/Contents/Resources/bin/python case/render_preview.py"""
+matplotlib):  /Applications/FreeCAD.app/Contents/Resources/bin/python hardware/enclosures/desk-case/render_preview.py"""
 import os
 import sys
 

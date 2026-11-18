@@ -31,8 +31,8 @@ calipers, measure and compare:
 Then, in the `skyscope-satellite` folder, regenerate (about 15 seconds) with FreeCAD 1.0 or newer:
 
 ```sh
-/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd -c "exec(open('case/make_case.py').read())"
-/Applications/FreeCAD.app/Contents/Resources/bin/python case/render_preview.py   # optional: new pictures
+/Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd -c "exec(open('hardware/enclosures/desk-case/make_case.py').read())"
+/Applications/FreeCAD.app/Contents/Resources/bin/python hardware/enclosures/desk-case/render_preview.py   # optional: new pictures
 ```
 
 (On Windows or Linux, use the `freecadcmd` and `python` that come with

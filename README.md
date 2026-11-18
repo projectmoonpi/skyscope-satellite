@@ -30,7 +30,7 @@ settings page and every Satellite follows.
 | Cable and power | USB-C data cable; any 5 V USB supply of 1 A or more |
 | Network | 2.4 GHz Wi-Fi |
 | SkyScope | [SkyScope](https://github.com/projectmoonpi/skyscope) 1.1 or later on the same network, settings page on (port 7700) |
-| Case (optional) | A 3D-printable radar-console desk case: [case/](case) |
+| Case (optional) | A 3D-printable radar-console desk case: [hardware/enclosures/desk-case/](hardware/enclosures/desk-case) |
 
 ## Install
 

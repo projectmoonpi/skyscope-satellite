@@ -3,7 +3,7 @@ ESP32-8048S043 (4.3" 800x480), styled after an ATC radar console: a sloped
 screen panel under a hood, a desk ledge in front, radar rings on the sides.
 It fits SkyScope Mini too (same board).
 
-Three parts, written to case/stl/ (and case/step/ for editing in CAD):
+Three parts, written to hardware/enclosures/desk-case/stl/ (and hardware/enclosures/desk-case/step/ for editing in CAD):
   console.stl     the body; prints upright on its base
   bezel.stl       the screen panel the board screws onto; prints face down
   back-cover.stl  vented cover with a cable notch; prints outside face down
@@ -11,7 +11,7 @@ Three parts, written to case/stl/ (and case/step/ for editing in CAD):
 
 Run with FreeCAD's command-line Python (FreeCAD 1.0 or newer):
   /Applications/FreeCAD.app/Contents/Resources/bin/freecadcmd -c \\
-      "exec(open('case/make_case.py').read())"
+      "exec(open('hardware/enclosures/desk-case/make_case.py').read())"
 
 MEASURE YOUR BOARD FIRST. The board's makers publish no mechanical drawing;
 the values marked "check" below are best estimates. Measure with calipers,
@@ -25,7 +25,7 @@ import MeshPart
 import Part
 from FreeCAD import Vector as V
 
-HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.path.join(os.getcwd(), "case")
+HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.path.join(os.getcwd(), "hardware", "enclosures", "desk-case")
 
 # --- the board (mm) -----------------------------------------------------------------
 PCB_W, PCB_H = 123.0, 74.0      # circuit board outline (retailer data)
